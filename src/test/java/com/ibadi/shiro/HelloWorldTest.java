@@ -15,10 +15,10 @@ public class HelloWorldTest {
 	@SuppressWarnings("unused")
 	@Test
 	public void testHelloWorld() {
-		System.out.println("Hello World!");
+		
 		// 1、获取SecurityManager工厂，此处使用Ini配置文件初始化SecurityManager
 		Factory<org.apache.shiro.mgt.SecurityManager> factory =
-		new IniSecurityManagerFactory("classpath:shiro.ini");
+		new IniSecurityManagerFactory("classpath:shiro-realm.ini");
 		// 2、得到SecurityManager实例 并绑定给SecurityUtils
 		org.apache.shiro.mgt.SecurityManager securityManager =factory.getInstance();
 		SecurityUtils.setSecurityManager(securityManager);
